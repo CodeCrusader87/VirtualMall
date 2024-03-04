@@ -6,4 +6,8 @@
 	.text-balance {
 		text-wrap: balance;
 	}
+
+	.vm-text-eh1 {
+		@apply text-6xl font-semibold leading-[70px] tracking-tight;
+	}
 }
