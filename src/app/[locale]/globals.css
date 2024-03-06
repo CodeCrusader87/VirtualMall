@@ -19,16 +19,16 @@
 		@apply text-4xl font-semibold leading-[53.2px] tracking-tight;
 	}
 	.vm-text-eh3 {
-		@apply text-3xl font-semibold leading-[44.8px] tracking-tight;
+		@apply text-3xl font-semibold leading-10 tracking-tight;
 	}
 	.vm-text-eh4 {
-		@apply text-[28px] font-semibold leading-[39.2px] tracking-tight;
+		@apply text-[28px] font-semibold leading-9 tracking-tight;
 	}
 	.vm-text-eh5 {
-		@apply text-2xl font-semibold leading-[33.6px] tracking-tight;
+		@apply text-2xl font-semibold leading-9 tracking-tight;
 	}
 	.vm-text-eh6 {
-		@apply text-2xl font-semibold leading-[33.6px] tracking-tight;
+		@apply text-2xl font-semibold leading-9 tracking-tight;
 	}
 
 	/* 
@@ -37,7 +37,7 @@
 	===============
 	*/
 	.vm-text-h1 {
-		@apply text-[34px] font-semibold leading-[40.8px]  tracking-tight;
+		@apply text-[34px] font-semibold leading-10   tracking-tight;
 	}
 	.vm-text-h2 {
 		@apply text-lg font-semibold leading-7 tracking-tight;
