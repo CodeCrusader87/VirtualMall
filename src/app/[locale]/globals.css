@@ -12,16 +12,16 @@
 	===============
 	*/
 	.vm-text-eh1 {
-		@apply text-6xl font-semibold leading-[70px] tracking-tight;
+		@apply text-6xl font-semibold leading-tight tracking-tight;
 	}
 	.vm-text-eh2 {
-		@apply text-4xl font-semibold leading-[53.2px] tracking-tight;
+		@apply text-4xl font-semibold leading-snug tracking-tight;
 	}
 	.vm-text-eh3 {
 		@apply text-3xl font-semibold leading-10 tracking-tight;
 	}
 	.vm-text-eh4 {
-		@apply text-[28px] font-semibold leading-9 tracking-tight;
+		@apply text-3xl font-semibold leading-9 tracking-tight;
 	}
 	.vm-text-eh5 {
 		@apply text-2xl font-semibold leading-9 tracking-tight;
@@ -59,34 +59,34 @@
 	Paragraphs
 	===============
 	*/
-	.vm-text-p1-regular{
-		@apply text-lg font-normal leading-7
+	.vm-text-p1-regular {
+		@apply text-lg font-normal leading-7;
 	}
-	.vm-text-p1-medium{
-		@apply text-lg font-medium leading-7
+	.vm-text-p1-medium {
+		@apply text-lg font-medium leading-7;
 	}
-	.vm-text-p2-regular{
-		@apply text-base font-normal leading-7
+	.vm-text-p2-regular {
+		@apply text-base font-normal leading-7;
 	}
-	.vm-text-p2-medium{
-		@apply text-base font-medium leading-7
+	.vm-text-p2-medium {
+		@apply text-base font-medium leading-7;
 	}
-	.vm-text-p3-regular{
-		@apply text-sm font-normal leading-7
+	.vm-text-p3-regular {
+		@apply text-sm font-normal leading-7;
 	}
-	.vm-text-p3-medium{
-		@apply text-sm font-medium leading-7
+	.vm-text-p3-medium {
+		@apply text-sm font-medium leading-7;
 	}
-	.vm-text-p4-regular{
-		@apply text-xs font-normal leading-7
+	.vm-text-p4-regular {
+		@apply text-xs font-normal leading-7;
 	}
-	.vm-text-p4-medium{
-		@apply text-xs font-medium leading-7
+	.vm-text-p4-medium {
+		@apply text-xs font-medium leading-7;
 	}
-	.vm-text-p5-regular{
-		@apply text-[10px] font-normal leading-7
+	.vm-text-p5-regular {
+		@apply text-[10px] font-normal leading-7;
 	}
-	.vm-text-p5-medium{
-		@apply text-[10px] font-medium leading-7
+	.vm-text-p5-medium {
+		@apply text-[10px] font-medium leading-7;
 	}
 }
