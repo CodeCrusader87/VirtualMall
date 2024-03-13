@@ -6,7 +6,7 @@ interface ButtonProps {
 	variant?: 'primary' | 'secondary';
 }
 
-const Button: React.FC<ButtonProps> = ({ text, icon, variant = 'primary' }) => {
+export const Button: React.FC<ButtonProps> = ({ text, icon, variant = 'primary' }) => {
 	const validVariant = variant === 'secondary' ? 'secondary' : 'primary';
 
 	const buttonStyle = `button ${
@@ -23,4 +23,4 @@ const Button: React.FC<ButtonProps> = ({ text, icon, variant = 'primary' }) => {
 	);
 };
 
-export default Button;
+// export default Button
