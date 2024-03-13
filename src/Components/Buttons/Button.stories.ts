@@ -16,8 +16,9 @@ export const Primary = {
 	},
 };
 
-// export const Secondary = Template.bind({});
-// Secondary.args = {
-//   variant: 'secondary',
-//   text: 'Button',
-// };
+export const Secondary = {
+ args:{
+    variant: 'secondary',
+    text: 'Button',
+ }
+};
