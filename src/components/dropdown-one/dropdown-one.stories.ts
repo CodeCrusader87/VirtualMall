@@ -21,3 +21,15 @@ export const Example_1: Story = {
 		],
 	},
 };
+
+export const Example_2: Story = {
+	args: {
+		// Provide props here
+		buttonText: 'Dropdown',
+		options: [
+			{ text: 'Option 1', action: () => window.alert('Option 1 clicked') },
+			{ text: 'Option 2', action: () => window.alert('Option 2 clicked') },
+			{ text: 'Option 3', action: () => window.alert('Option 3 clicked') },
+		],
+	},
+};
