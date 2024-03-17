@@ -18,7 +18,7 @@ interface DropdownOneOption {
 export default function DropdownOne({ buttonText, options }: DropdownOneProps) {
 	return (
 		<Menu as="div" className="relative w-fit text-left">
-			<Menu.Button className="flex w-fit justify-between items-center gap-2 rounded-lg px-4 py-3 vm-text-p3-medium text-vm-black-100 border border-vm-grey-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+			<Menu.Button className="flex w-fit justify-between items-center gap-2 rounded-lg px-4 py-2 vm-text-p3-medium text-vm-black-100 border border-vm-grey-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
 				{buttonText}
 				<ArrowDownTriangle className="w-4 h-4" />
 			</Menu.Button>
