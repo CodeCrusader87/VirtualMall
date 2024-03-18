@@ -2,11 +2,15 @@ import React from 'react';
 
 interface ButtonProps {
 	text: string;
-	icon?: React.ReactNode;
+	icon?: React.JSX.ElementType;
 	variant?: 'primary' | 'secondary';
 }
 
-export const Button: React.FC<ButtonProps> = ({ text, icon, variant = 'primary' }) => {
+export const Button: React.FC<ButtonProps> = ({
+	text,
+	icon,
+	variant = 'primary',
+}) => {
 	const validVariant = variant === 'secondary' ? 'secondary' : 'primary';
 
 	const buttonStyle = `button ${
@@ -17,8 +21,8 @@ export const Button: React.FC<ButtonProps> = ({ text, icon, variant = 'primary' 
 
 	return (
 		<button className={buttonStyle}>
-			{icon && <span className="button-icon mr-2">{icon}</span>}
-			{text}
+			{icon && <icon className="w-5 h-5" />}
+			{/* {text} */}
 		</button>
 	);
 };

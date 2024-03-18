@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import type { Meta, StoryObj } from '@storybook/react';
+import { CartIcon } from '@/assets/icons';
 
 export default {
 	title: 'Components/Button',
@@ -17,8 +18,16 @@ export const Primary = {
 };
 
 export const Secondary = {
- args:{
-    variant: 'secondary',
-    text: 'Button',
- }
+	args: {
+		variant: 'secondary',
+		text: 'Button',
+	},
+};
+
+export const WithIcon = {
+	args: {
+		icon: CartIcon,
+		variant: 'secondary',
+		text: 'icon',
+	},
 };
