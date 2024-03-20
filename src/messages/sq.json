@@ -1,6 +1,10 @@
 {
-	"title": "Kjo është titulli në shqip",
-	"loginPage": {
-		"title": "Kjo është faqja e hyrjes në shqip"
+	"common": {
+		"language": "Gjuha"
+	},
+	"locales": {
+		"en": "Anglisht",
+		"sq": "Shqip",
+		"sr": "Serbisht"
 	}
 }
