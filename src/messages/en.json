@@ -1,6 +1,10 @@
 {
-	"title": "This is English title",
-	"loginPage": {
-		"title": "This is English Login Page title"
+	"common": {
+		"language": "Language"
+	},
+	"locales": {
+		"en": "English",
+		"sq": "Albanian",
+		"sr": "Serbian"
 	}
 }
