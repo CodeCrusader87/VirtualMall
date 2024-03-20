@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from './Button';
+import { Button } from './button';
 import type { Meta, StoryObj } from '@storybook/react';
-import { CartIcon } from '@/assets/icons';
+import { ShoppingCart } from '@/assets/icons';
 
 export default {
 	title: 'Components/Button',
@@ -10,24 +10,25 @@ export default {
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary = {
+export const Primary: Story = {
 	args: {
 		variant: 'primary',
-		text: 'Button',
+		text: 'Buy Now',
 	},
 };
 
-export const Secondary = {
+export const Secondary: Story = {
 	args: {
 		variant: 'secondary',
 		text: 'Button',
+		onClickAction: () => window.alert('Secondary variant clicked'),
 	},
 };
 
-export const WithIcon = {
+export const WithIcon: Story = {
 	args: {
-		icon: CartIcon,
+		icon: ShoppingCart,
 		variant: 'secondary',
-		text: 'icon',
+		text: 'Add to Cart',
 	},
 };
