@@ -5,6 +5,7 @@ import React, { ElementType, Fragment, ReactNode } from 'react';
 
 export interface DropdownOneProps {
 	buttonText: string;
+	variant?: 'classic' | 'borderless';
 	options: Array<DropdownOneOption>;
 }
 
@@ -15,10 +16,16 @@ interface DropdownOneOption {
 	icon?: React.JSX.ElementType;
 }
 
-export default function DropdownOne({ buttonText, options }: DropdownOneProps) {
+export default function DropdownOne({
+	buttonText,
+	options,
+	variant = 'classic',
+}: DropdownOneProps) {
 	return (
 		<Menu as="div" className="relative w-fit text-left">
-			<Menu.Button className="flex w-fit justify-between items-center gap-2 rounded-lg px-4 py-2 vm-text-p3-medium text-vm-black-100 border border-vm-grey-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+			<Menu.Button
+				className={`flex w-fit justify-between items-center gap-2 rounded-lg px-4 py-3 vm-text-p3-medium text-vm-black-100  focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 ${variant === 'classic' ? 'border border-vm-grey-700' : ''}`}
+			>
 				{buttonText}
 				<ArrowDownTriangle className="w-4 h-4" />
 			</Menu.Button>
