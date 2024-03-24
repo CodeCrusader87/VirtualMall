@@ -1,64 +1,70 @@
 import { Fragment, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
+import { ArrowDownTriangle } from '@/assets/icons';
 
-const people = [
-	{ name: 'Wade Cooper' },
-	{ name: 'Arlene Mccoy' },
-	{ name: 'Devon Webb' },
-	{ name: 'Tom Cook' },
-	{ name: 'Tanya Fox' },
-	{ name: 'Hellen Schmidt' },
-];
+interface DropdownTwoOption {
+	label: string;
+	[key: string]: any;
+}
 
-export default function Example() {
-	const [selected, setSelected] = useState(people[0]);
+export interface DropdownTwoProps {
+	options: Array<DropdownTwoOption>;
+	selectedOption: DropdownTwoOption;
+	setSelectedOption: (value: DropdownTwoOption) => void;
+	variant?: 'classic' | 'borderless';
+}
 
+export default function DropdownTwo({
+	options,
+	selectedOption,
+	setSelectedOption,
+	variant = 'classic',
+}: DropdownTwoProps) {
 	return (
-		<div className="fixed top-16 w-72">
-			<Listbox value={selected} onChange={setSelected}>
-				<div className="relative mt-1">
-					<Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
-						<span className="block truncate">{selected.name}</span>
-					</Listbox.Button>
-					<Transition
-						as={Fragment}
-						leave="transition ease-in duration-100"
-						leaveFrom="opacity-100"
-						leaveTo="opacity-0"
-					>
-						<Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
-							{people.map((person, personIdx) => (
-								<Listbox.Option
-									key={personIdx}
-									className={({ active }) =>
-										`relative cursor-default select-none py-2 pl-10 pr-4 ${
-											active ? 'bg-amber-100 text-amber-900' : 'text-gray-900'
-										}`
-									}
-									value={person}
-								>
-									{({ selected }) => (
-										<>
-											<span
-												className={`block truncate ${
-													selected ? 'font-medium' : 'font-normal'
-												}`}
-											>
-												{person.name}
-											</span>
-											{selected ? (
-												<span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
-													{/**TODO - add check icon */}
-												</span>
-											) : null}
-										</>
-									)}
-								</Listbox.Option>
-							))}
-						</Listbox.Options>
-					</Transition>
-				</div>
-			</Listbox>
-		</div>
+		<Listbox value={selectedOption} by="label" onChange={setSelectedOption}>
+			<div className="relative w-36 text-left">
+				<Listbox.Button
+					className={`flex w-full justify-between items-center gap-2 rounded-lg px-3 py-3 vm-text-p3-medium text-vm-black-100 ${variant === 'classic' && 'border border-vm-grey-700'} focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75`}
+				>
+					<span className="block truncate">{selectedOption.label}</span>
+					<ArrowDownTriangle className="w-4 h-4" />
+				</Listbox.Button>
+				<Transition
+					as={Fragment}
+					enter="transition ease-out duration-100"
+					enterFrom="transform opacity-0 scale-95"
+					enterTo="transform opacity-100 scale-100"
+					leave="transition ease-in duration-75"
+					leaveFrom="transform opacity-100 scale-100"
+					leaveTo="transform opacity-0 scale-95"
+				>
+					<Listbox.Options className="absolute left-0 mt-2 min-w-full origin-top-right divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+						{options.map((option) => (
+							<Listbox.Option
+								key={option.label}
+								className={({ active }) =>
+									`flex w-full items-center cursor-pointer rounded-md px-2 py-2 vm-text-p3-regular duration-200 gap-1 ${
+										active ? ' bg-vm-green-200 text-white' : 'text-gray-900'
+									}`
+								}
+								value={option}
+							>
+								{({ selected }) => (
+									<>
+										<span
+											className={`block truncate ${
+												selected ? 'vm-text-p3-medium' : 'vm-text-p3-regular'
+											}`}
+										>
+											{option.label}
+										</span>
+									</>
+								)}
+							</Listbox.Option>
+						))}
+					</Listbox.Options>
+				</Transition>
+			</div>
+		</Listbox>
 	);
 }
