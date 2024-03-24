@@ -50,7 +50,7 @@ export default function DropdownOne({
 											onClick={option.action}
 											className={`${
 												active ? ' bg-vm-green-200 text-white' : 'text-gray-900'
-											}  flex w-full items-center rounded-md px-2 py-2 vm-text-p3-regular duration-200 gap-1`}
+											}  flex w-full items-center rounded-md px-2 py-1 vm-text-p3-regular duration-200 gap-1`}
 										>
 											{option.icon && <option.icon className="w-5 h-5" />}
 											{option.text}
