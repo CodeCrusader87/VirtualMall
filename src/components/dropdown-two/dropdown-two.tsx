@@ -22,9 +22,9 @@ export default function DropdownTwo({
 }: DropdownTwoProps) {
 	return (
 		<Listbox value={selectedOption} by="label" onChange={setSelectedOption}>
-			<div className="relative w-36 text-left">
+			<div className="relative max-w-24 text-left">
 				<Listbox.Button
-					className={`flex w-full justify-between items-center gap-2 rounded-lg px-3 py-3 vm-text-p3-medium text-vm-black-100 ${variant === 'classic' && 'border border-vm-grey-700'} focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75`}
+					className={`flex w-full items-center gap-2 rounded-lg vm-text-p3-medium text-vm-black-100 ${variant === 'classic' && 'border border-vm-grey-700 px-3 py-3'} focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75`}
 				>
 					<span className="block truncate">{selectedOption.label}</span>
 					<ArrowDownTriangle className="w-4 h-4" />
