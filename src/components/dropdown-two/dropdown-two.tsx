@@ -38,12 +38,12 @@ export default function DropdownTwo({
 					leaveFrom="transform opacity-100 scale-100"
 					leaveTo="transform opacity-0 scale-95"
 				>
-					<Listbox.Options className="absolute left-0 mt-2 min-w-full origin-top-right divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+					<Listbox.Options className="absolute left-0 mt-2 p-1 min-w-full origin-top-right divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
 						{options.map((option) => (
 							<Listbox.Option
 								key={option.label}
 								className={({ active }) =>
-									`flex w-full items-center cursor-pointer rounded-md px-2 py-2 vm-text-p3-regular duration-200 gap-1 ${
+									`flex w-full items-center cursor-pointer rounded-md px-2 py-1 vm-text-p3-regular duration-200 gap-1 ${
 										active ? ' bg-vm-green-200 text-white' : 'text-gray-900'
 									}`
 								}
