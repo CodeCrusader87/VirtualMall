@@ -1,0 +1,38 @@
+[
+	{
+		"key": 1,
+		"icon": { "src": "./electronics.svg", "alt": "Electronics" },
+		"title": "Electronics",
+		"nop": "9.8K"
+	},
+	{
+		"key": 2,
+		"icon": { "src": "./fashion.svg", "alt": "Fashion" },
+		"title": "Fashion",
+		"nop": "9.8K"
+	},
+	{
+		"key": 3,
+		"icon": { "src": "./actionfigure.svg", "alt": "Action Figure" },
+		"title": "Action Figure",
+		"nop": "9.8K"
+	},
+	{
+		"key": 4,
+		"icon": { "src": "./music.svg", "alt": "Music" },
+		"title": "Music",
+		"nop": "9.8K"
+	},
+	{
+		"key": 5,
+		"icon": { "src": "./book.svg", "alt": "Book" },
+		"title": "Book",
+		"nop": "9.8K"
+	},
+	{
+		"key": 6,
+		"icon": { "src": "./games.svg", "alt": "Games" },
+		"title": "Gaming",
+		"nop": "9.8K"
+	}
+]
